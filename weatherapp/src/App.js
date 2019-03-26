@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import WeatherApp from './components/WeatherApp.js';
+
+const ApiKey = '7206f555ea9bd199f277647daa4aad73';
 
 class App extends Component {
+
+  getWeather = async () => {
+    const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=stockholm,sweden&APPID=${ApiKey}&units=metric`);
+    const data = await apiCall.json();
+    console.log(data);
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <WeatherApp />
     );
   }
 }
