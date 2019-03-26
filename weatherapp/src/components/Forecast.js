@@ -4,8 +4,12 @@ export default class Forecast extends Component{
 
     render()
     {
-        return (<div>
-            <p>{}</p>
-        </div>);
+        return (<form onSubmit={this.props.getWeather}>
+            <input type="text" name="city" placeholder="City..."/>
+            <input type="text" name="country" placeholder="Country..."/>
+            <button>Get Weather</button>
+        </form>
+
+        );
     }
 }
