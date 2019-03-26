@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'raf/polyfill';
 
 import Weather from './components/Weather.js';
 import Forecast from './components/Forecast.js';
@@ -13,7 +12,8 @@ class App extends Component {
     city: undefined,
     country: undefined,
     description: undefined,
-    error: undefined
+    //error: undefined,
+    date: undefined
   }
 
   async componentDidMount() {
@@ -28,7 +28,8 @@ class App extends Component {
       city: data.name,
       country: data.sys.country,
       description: data.weather[0].description,
-      error: ""
+      //error: "",
+      date: new Date().toLocaleString()
     });
   }
 
@@ -40,6 +41,7 @@ class App extends Component {
         country={this.state.country}
         description={this.state.description}
         error={this.state.error}
+        date={this.state.date}
         />
       <Forecast getWeather={this.getWeather}/>
     </div>
