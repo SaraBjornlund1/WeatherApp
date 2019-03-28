@@ -13,7 +13,8 @@ class App extends Component {
     country: undefined,
     description: undefined,
     //error: undefined,
-    date: undefined
+    date: undefined,
+    icon: undefined
   }
 
   async componentDidMount() {
@@ -42,6 +43,7 @@ class App extends Component {
         description={this.state.description}
         error={this.state.error}
         date={this.state.date}
+        icon={this.state.icon}
         />
       <Forecast getWeather={this.getWeather}/>
     </div>
