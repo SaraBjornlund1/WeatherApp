@@ -14,7 +14,8 @@ class App extends Component {
     description: undefined,
     //error: undefined,
     date: undefined,
-    icon: undefined
+    icon: undefined,
+    day: undefined
   }
 
   async componentDidMount() {
@@ -30,7 +31,8 @@ class App extends Component {
       country: data.sys.country,
       description: data.weather[0].description,
       //error: "",
-      date: new Date().toLocaleString()
+      date: new Date().toLocaleString(),
+      icon: data.weather[0].icon
     });
   }
 
@@ -45,7 +47,8 @@ class App extends Component {
         date={this.state.date}
         icon={this.state.icon}
         />
-      <Forecast getWeather={this.getWeather}/>
+      <Forecast /*getWeather={this.getWeather}*/ 
+        day={this.state.day}/>
     </div>
 
     );

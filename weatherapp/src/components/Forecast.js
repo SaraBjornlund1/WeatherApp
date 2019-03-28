@@ -4,6 +4,7 @@ export default class Forecast extends Component{
 
     render()
     {
+        //console.log(this.props.day);
         return (<div>
             
         </div>
