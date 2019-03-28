@@ -11,7 +11,7 @@ export default class Weather extends Component{
             <p>Temprature: {this.props.temprature}</p>
             <p>Description: {this.props.description}</p>
             <p>Local Time: {this.props.date}</p>
-            <img src={`http://openweathermap.org/img/w/${this.props.icon}.png`}/>
+            <img src={`http://openweathermap.org/img/w/${this.props.icon}.png`} alt="WeatherImage"/>
         </div>); 
     }
 }
