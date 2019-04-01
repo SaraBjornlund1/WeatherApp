@@ -11,28 +11,20 @@ class App extends Component {
     city: undefined,
     country: undefined,
     description: undefined,
-    //error: undefined,
     date: undefined,
     icon: undefined,
   }
 
   async componentDidMount() {
-  //getWeather = async (e) => {
-    //e.preventDefault();
     const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=stockholm,sweden&APPID=${ApiKey}&units=metric`);
     const data = await apiCall.json();
     console.log(data);
-
-    // const apiForecast = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=stockholm,sweden&APPID=${ApiKey}&units=metric`);
-    // const forecastData = await apiForecast.json();
-    // console.log(forecastData);
 
     this.setState({
       temprature: data.main.temp,
       city: data.name,
       country: data.sys.country,
       description: data.weather[0].description,
-      //error: "",
       date: new Date().toLocaleString(),
       icon: data.weather[0].icon,
     });
@@ -49,9 +41,7 @@ class App extends Component {
         date={this.state.date}
         icon={this.state.icon}
         />
-      <Forecast /*getWeather={this.getWeather}*/ 
-        //forecast={this.state.forecast}
-        />
+      <Forecast/>
     </div>
 
     );
