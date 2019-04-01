@@ -4,13 +4,18 @@ export default class Weather extends Component{
 
     render()
     {
-        return (<div>
-            <h1>Weather today:</h1>
-            <p>Location: {this.props.city}, {this.props.country}</p>
-            <p>Temprature: {this.props.temprature}</p>
-            <p>Description: {this.props.description}</p>
-            <p>Local Time: {this.props.date}</p>
-            <img src={`http://openweathermap.org/img/w/${this.props.icon}.png`} alt="WeatherImage"/>
+        return (<div className="background">
+            <h1>Weather Today</h1>
+            <div className="container1">
+                <img className="imgSize" src={`http://openweathermap.org/img/w/${this.props.icon}.png`} alt="WeatherImage" />
+            </div>
+            <div className="container2">
+                
+                <p>Location: {this.props.city}, {this.props.country}</p>
+                <p>Temprature: {Math.round(this.props.temprature)} °C</p>
+                <p>Description: {this.props.description}</p>
+                <p>Local Time: {this.props.date}</p>
+            </div>
         </div>); 
     }
 }

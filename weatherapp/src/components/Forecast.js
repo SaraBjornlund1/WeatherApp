@@ -20,16 +20,26 @@ export default class Forecast extends Component{
 
     render() {
         let allDays = this.state.forecast.map((forecasts) => {
-            return(<li>
-                <img src={`http://openweathermap.org/img/w/` + forecasts.weather[0].icon +`.png`} alt="WeatherImage"/>
-                {forecasts.dt_txt}
-                Min Temp: {forecasts.main.temp_min} / Max Temp: {forecasts.main.temp_max}
-                </li>
-                
+            return(
+                <div className="row">
+                    <div className="col s12 m6">
+                        <div className="card blue-grey darken-1">
+                            <div className="card-content white-text">
+                                <li>
+                                    <div className="container1">
+                                    <img className="imgSize" src={`http://openweathermap.org/img/w/` + forecasts.weather[0].icon + `.png`} alt="WeatherImage" />
+                                    </div>
+                                    {forecasts.dt_txt}
+                                    <p>Min Temp: {Math.round(forecasts.main.temp_min)} °C / Max Temp: {Math.round(forecasts.main.temp_max)} °C</p>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             );
         })
-        return(<div>
-            <h1>Forecast 5 days</h1>
+        return(<div className="wrapper">
+            <h1>Forecast 5 Days</h1>
             <ul>{allDays}</ul>
         </div>);
     }
