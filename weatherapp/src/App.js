@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Weather from './components/Weather.js';
 import Forecast from './components/Forecast.js';
 
@@ -15,7 +14,6 @@ class App extends Component {
     //error: undefined,
     date: undefined,
     icon: undefined,
-    day: undefined
   }
 
   async componentDidMount() {
@@ -32,7 +30,7 @@ class App extends Component {
       description: data.weather[0].description,
       //error: "",
       date: new Date().toLocaleString(),
-      icon: data.weather[0].icon
+      icon: data.weather[0].icon,
     });
   }
 
@@ -48,7 +46,7 @@ class App extends Component {
         icon={this.state.icon}
         />
       <Forecast /*getWeather={this.getWeather}*/ 
-        day={this.state.day}/>
+        />
     </div>
 
     );
