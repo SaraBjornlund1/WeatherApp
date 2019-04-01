@@ -23,6 +23,10 @@ class App extends Component {
     const data = await apiCall.json();
     console.log(data);
 
+    // const apiForecast = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=stockholm,sweden&APPID=${ApiKey}&units=metric`);
+    // const forecastData = await apiForecast.json();
+    // console.log(forecastData);
+
     this.setState({
       temprature: data.main.temp,
       city: data.name,
@@ -46,6 +50,7 @@ class App extends Component {
         icon={this.state.icon}
         />
       <Forecast /*getWeather={this.getWeather}*/ 
+        //forecast={this.state.forecast}
         />
     </div>
 
