@@ -8,7 +8,7 @@ export default class Weather extends Component{
             <div>
                 <nav>
                     <div className="nav-wrapper teal darken-4">
-                        <h3>Weather</h3>
+                        <h3>WeatherSMHI</h3>
                     </div>
                 </nav>
                 <div className="background">
