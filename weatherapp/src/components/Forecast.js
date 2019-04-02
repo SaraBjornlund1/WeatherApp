@@ -23,13 +23,13 @@ export default class Forecast extends Component{
             return(
                 <div className="row">
                     <div className="col s12 m6">
-                        <div className="card blue-grey darken-1">
+                        <div className="card teal darken-3">
                             <div className="card-content white-text">
                                 <li>
                                     <div className="container1">
                                     <img className="imgSize" src={`http://openweathermap.org/img/w/` + forecasts.weather[0].icon + `.png`} alt="WeatherImage" />
                                     </div>
-                                    {forecasts.dt_txt}
+                                    <strong>{forecasts.dt_txt}</strong>
                                     <p>Min Temp: {Math.round(forecasts.main.temp_min)} °C / Max Temp: {Math.round(forecasts.main.temp_max)} °C</p>
                                 </li>
                             </div>
