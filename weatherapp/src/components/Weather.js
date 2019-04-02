@@ -18,10 +18,10 @@ export default class Weather extends Component{
                     </div>
                     <div className="container2">
 
-                        <p>Location: {this.props.city}, {this.props.country}</p>
-                        <p>Temprature: {Math.round(this.props.temprature)} °C</p>
-                        <p>Description: {this.props.description}</p>
-                        <p>Local Time: {this.props.date}</p>
+                        <p><strong>Location:</strong> {this.props.city}, {this.props.country}</p>
+                        <p><strong>Temprature:</strong> {Math.round(this.props.temprature)} °C</p>
+                        <p><strong>Description:</strong> {this.props.description}</p>
+                        <p><strong>Local Time:</strong> {this.props.date}</p>
                     </div>
                 </div>
             </div>
