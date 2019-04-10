@@ -22,7 +22,7 @@ export default class Forecast extends Component{
         let allDays = this.state.forecast.map((forecasts) => {
             return(
                 <div className="row">
-                    <div className="col s12 m6">
+                    <div className="col s12">
                         <div className="card teal darken-3">
                             <div className="card-content white-text">
                                 <li>
@@ -43,15 +43,4 @@ export default class Forecast extends Component{
             <ul>{allDays}</ul>
         </div>);
     }
-    
-
-    // render(){
-    //     let allDays = this.state.forecast.map((forecast) => {
-    //         let day = forecast.weather[0].id;
-
-    //         return (<div>
-    //             <h1>Forecast 5 days</h1>
-    //         </div>);
-    //     })
-    // });
 }

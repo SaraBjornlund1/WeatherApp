@@ -6,13 +6,8 @@ export default class Weather extends Component{
     {
         return (
             <div>
-                <nav>
-                    <div className="nav-wrapper teal darken-4">
-                        <h3>WeatherSMHI</h3>
-                    </div>
-                </nav>
-                <div className="background">
-                    <h1>Weather Today</h1>
+                <div className="wrapper">
+                    <h1>Weather today</h1>
                     <div className="container1">
                         <img className="imgSize" src={`http://openweathermap.org/img/w/${this.props.icon}.png`} alt="WeatherImage" />
                     </div>

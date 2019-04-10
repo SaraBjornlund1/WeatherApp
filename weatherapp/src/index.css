@@ -19,11 +19,22 @@ code {
 
 .wrapper{
   background-color: white;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
+  margin-right: 20px;
+  margin-left: 20px;
+  max-width: 600px;
   padding-right: 10px;
   padding-left: 10px;
+}
+
+.rightWrapper{
+  background-color: white;
+  margin-right: 30px;
+  margin-left: 700px;
+  max-width: 400px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top: 43px;
+  color: black;
 }
 
 .container1{
@@ -45,15 +56,6 @@ h1{
   margin: auto;
 }
 
-.background{
-  background-color: white;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
 .logo{
   content: url('../src/img/sun.jpg');
   height: 5px;
@@ -61,16 +63,4 @@ h1{
 }
 
 
-/* .background{
-  max-width: 960;
-  background: linear-gradient(
-    rgba(190, 190, 190, 0.479),
-    rgba(207, 207, 207, 0.274)
-  ),
-  url('../src/img/nature1\,jpg.jpg');
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-} */
 
